@@ -1,0 +1,91 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="keyword" content="">
+        <meta name="description" content="">
+        <title> future of energy </title>
+
+        <!-- font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+
+        <!--css  -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style05.css">
+    </head>
+    <body>        
+              <!-- header -->
+        <div class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <img src="images/logo/icon1.svg" alt="solar energy logo" draggable="false">
+                    </div>
+                    <ul class="nav">
+                      <li><a href="project.html">Home</a></li>
+                      <li><a href="project.html">About</a></li>
+                      <li><a href="#">Product</a></li>
+                      <li><a href="project.html">Contact</a></li>
+                      <li><a href="Login.html" class="active">Login</a></li>
+                  </ul>
+
+                </div>
+            </div> <!-- container -->
+        </div>   <!-- header -->     
+<div class="wrapper fadeInDown">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> LOGIN </h2>
+    <!-- Login Form -->
+    <form>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="Username">
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="Password">   
+	<input type="submit" class="fadeIn fourth" value="Log In">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a> 
+      <a class="underlineHover" <a href="SIGNUP.html">Creat new acount.?</a>
+    </div>
+
+  </div>
+</div>
+
+<script>
+  // Select the form and inputs
+    const form = document.querySelector('form');
+    const usernameInput = document.querySelector('#login');
+    const passwordInput = document.querySelector('#password');
+
+    // Add event listener to form submission
+    form.addEventListener('submit', function (event) {
+      // Prevent the form from submitting
+      event.preventDefault();
+
+      // Get the values from the inputs
+      const username = usernameInput.value.trim();
+      const password = passwordInput.value.trim();
+
+      // Check if the values are not empty
+      if (username === '' || password === '') {
+        alert('Please enter a username and password.');
+        return;
+      }
+
+      // Check if the password meets the minimum requirements
+      if (password.length < 8) {
+        alert('Password must be at least 8 characters long.');
+        return;
+      }
+
+      // Perform any other necessary validation
+
+      // Submit the form if everything is valid
+      form.submit();
+    });
+
+</script>
+</html>

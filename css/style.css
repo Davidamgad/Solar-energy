@@ -1,0 +1,368 @@
+/* common  */
+/* 
+  - container 
+  1) opacity hover
+  2) section header
+  3) section padding 
+  4) hover effect 1 (left to right )
+  5) hover effect 2 ( up to down )
+*/
+body{
+  font-family: 'Varela Round', sans-serif;
+}
+/* general style css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  /*css3*/   
+}
+.container {
+width: 80%;
+margin: auto;
+}
+
+h1 ,h2,h3,h4,h5,h6{
+  font-family:inherit,sans-serif ; 
+}
+/* effict bottom */
+.hover-opacity{
+  transition: opacity 5s;
+}
+
+.hover-opacity:hover{
+  opacity: 0,8;
+}
+
+/* padding le kol el divat */
+/* .pd-x{
+  padding: 120 , 0;
+} */
+
+/* header */
+.header {
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.781);
+}
+.header .header-content{
+  overflow: hidden;
+}
+.header .logo {
+  width: 50%;
+   float: left;
+}
+
+
+.logo img {
+  width: 100;
+  height: 50;
+  margin-top: 5;
+}
+.header .nav {
+  width: 50%;
+  float: left;
+  list-style: none; /* علشان اشيل النقط السوده*/
+  text-align: right;
+}
+
+.header .nav li {
+  display: inline-block;
+
+}
+
+.header .nav li a {
+  color: #34495e;
+  font-size: 21px;
+  text-decoration: none;
+  display: block;
+  padding: 18px;
+}
+
+
+
+
+.header .nav li a.active:after
+,.header .nav li a:after{
+   content: "";
+   display: block;
+   height: 3px;
+   background: #6195ff;
+   transition: width 0.4s;
+ }
+ .header .nav li a.active:after{
+   width: 100%;
+ }
+
+ .header .nav li a:after{
+   width: 0;
+ }
+
+
+ .header .nav li a:hover:after{
+   width: 100%; 
+ }
+ 
+/* home section */
+
+.home {
+  height: 100vh;
+  background-image: url(../images/background/background1.jpeg);
+  background-size: cover ;
+  position: relative;
+  background-attachment:fixed ;
+}
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0.2,0.3);
+}
+.home .title{
+  color: white;
+  font-size: 5rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.home-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+
+.home-desc{
+  text-transform: uppercase;
+			font-size: .75rem;
+			font-weight: 300;
+			margin: 0 0 .5rem 0;
+			padding: 0 0 1rem 0;
+			letter-spacing: .25rem;
+}
+
+/* section header */
+.section-header{
+  text-align: center;
+  margin-bottom: 11%;
+}
+
+.section-title{
+  font-size: 30;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+.section-header .line {
+  display: block;
+  margin: 0 auto 70px auto; 
+  background-color:#6195ff;
+  width: 120px;
+  height: 2.5px;
+}
+
+/* section about */
+
+.about{
+  
+  background: #f8f8f8;
+  padding: 120px 0px;
+}
+
+.about-content{
+  overflow: hidden;
+}
+
+.about-item{
+  width: 30%;
+  float: left;
+  background: #ffff;
+}
+
+.about-item.mg{
+  margin: 0 5%;
+
+}
+.solar-img img{
+  width: 100%;
+}
+
+.sollar-info{
+  padding: 20px;
+}
+
+.sollar-title{
+  font-weight: bold;
+  margin: 20px 0;
+  font: inherit;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+ .sollar-desc{
+   color: #999;
+  margin-bottom: 10px ;
+  line-height: 1.5;
+ }
+ .sollar-link{
+   color: #6195ff;
+   text-align: center;
+    margin: auto;
+    padding: 8px;
+    text-decoration: none;
+    border: 3px solid #6195ff;
+    display:block;
+
+ }
+ .sollar-link:hover {
+  background: #6195ff;
+  color: white;
+  transition: background .4s ease-out;
+
+ }
+ /* Contact Section */
+.contact-content{
+  overflow: hidden;
+}
+.contact-item-icon{
+  width: 30%;
+  float: left;
+  text-align: center;
+
+  
+}
+.contact-item-icon.mg{
+  margin: 0 5%;
+  text-align: center;
+  
+}
+
+
+.contact-item-icon .icon{
+  color: #7ba7ff;
+}
+.contact-icon-phone{
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: capitalize;
+  margin: 15px 0;
+
+}
+.contact-date{
+  color: #868F9B;
+  font-size: 15px;
+  margin-bottom: 50px;
+}
+.contact {
+  text-align: center;
+}
+
+.contact-form-class{
+  padding: 120 0;
+}
+.contact-form-class .contact-form-input input, .contact-form-input-next-Supject input, .contact-textarea textarea {
+ 
+  padding:  10px;
+  text-transform: capitalize;
+  background-color: #F4F4F4;
+  border: 0;
+  margin: auto;
+ margin: 15px;
+  color: #354052;;
+  font-size: 15px;
+ 
+
+}
+.contact-form-class .contact-form-input input{
+ 
+  width: 350px;
+  height: 40px;
+
+}
+.contact-form-input-next-Supject input{
+ width: 730px;
+ height: 40px;
+
+}
+.contact-textarea textarea{
+  width: 730px;
+  height: 90px;
+
+
+}
+.contact-button {
+  color: #fff;
+  background-color:#7ba7ff  ;
+  width: 180px;
+  height: 50px;
+  border: 0;
+  border-radius:4% ;
+  border-color: #6195ff;
+  font-size: 17px;
+}
+.contact-button:hover{
+  opacity: 0.8;
+}
+
+/* footer section */
+.footer{
+  background: #1c1d21;
+  text-align: center;
+  padding: 60 0;
+}
+
+.footer-links{
+  list-style: none;
+}
+
+.footer-links li{
+  display: inline-block;
+  margin: 20 0;
+}
+
+.footer-links li a{
+  display: block;
+  width: 50;
+  height: 50;
+  background: #6195ff;
+  color: #fff;
+  border-radius: 50%;
+}
+
+.footer-links li a i{
+  line-height: 50px;
+}
+
+.footer .copyright{
+  color: #999;
+}
+
+/* .footer-links .hover-opacity {
+  transition: opacity 5s;
+} */
+.footer-links:hover{
+  opacity: 0.8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
